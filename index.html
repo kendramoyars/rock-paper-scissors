@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock Paper Scissors</title>
+    <script>
+        // randomly generate the computers choice
+    function computerPlay() {
+        let num = Math.floor(Math.random() * 3);
+
+        if (num === 0) {
+            let choice = "rock";
+            return choice;
+        } else if (num === 1) {
+            let choice = "paper";
+            return choice;
+        } else {
+            let choice = "scissors";
+            return choice;
+        }
+    }
+    // compare the user's input to the computers
+    function playRound(playerSelection, computerSelection) {
+        let a = playerSelection.toLowerCase();
+        let b = computerSelection;
+
+        if (a === "rock" && b === "rock") {
+            return "Its a tie!";
+        } else if (a === "scissors" && b === "scissors") {
+            return "Its a tie!";
+        } else if (a === "paper" && b === "paper") {
+            return "Its a tie!";
+        } else if (a === "rock" && b =="scissors") {
+            return "Player wins!";
+        } else if (a === "rock" && b =="paper") {
+            return "Computer wins!";
+        } else if (a === "paper" && b =="rock") {
+            return "Player wins!";
+        } else if (a === "paper" && b =="scissors") {
+            return "Computer wins!";
+        } else if (a === "scissors" && b =="rock") {
+            return "Computer wins!";
+        } else if (a === "scissors" && b =="paper") {
+            return "Player wins!";
+        } else {
+            return "Something went wrong.";
+        }
+    }
+
+    function game() {
+        let playerSelection = prompt("Enter either Rock, paper, or scissors");
+        let computerSelection = computerPlay();
+
+        //
+        
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
